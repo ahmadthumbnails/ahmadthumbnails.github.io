@@ -19,15 +19,15 @@ const THUMBNAILS = [
     link: ""
   },
   {
-    title: "Best texture packs for Minecraft",
-    image: "images/thumbnails/best-texture-packs-mcpe.jpg",
-    tags: ["Minecraft", "Gaming"],
-    link: ""
-  },
-  {
     title: "CapCut Mobile for beginners",
     image: "images/thumbnails/capcut-mobile-beginners.jpg",
     tags: ["Tutorial"],
+    link: ""
+  },
+  {
+    title: "Gold & Crypto Live Trading",
+    image: "images/thumbnails/gold-trading-live.png",
+    tags: ["Trading"],
     link: ""
   },
   {
@@ -46,6 +46,12 @@ const THUMBNAILS = [
     title: "5 Best Animes to Watch",
     image: "images/thumbnails/5-anime-to-watch.jpg",
     tags: ["Anime"],
+    link: ""
+  },
+  {
+    title: "Best texture packs for Minecraft",
+    image: "images/thumbnails/best-texture-packs-mcpe.jpg",
+    tags: ["Minecraft", "Gaming"],
     link: ""
   },
   {
