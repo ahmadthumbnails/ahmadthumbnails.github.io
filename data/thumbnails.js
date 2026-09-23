@@ -14,67 +14,67 @@
 const THUMBNAILS = [
   {
     title: "How to grind in Adopt Me",
-    image: "images/thumbnails/adopt-me-grind.jpg",
+    image: "images/thumbnails/adopt-me-grind.webp",
     tags: ["Roblox", "Gaming"],
     link: ""
   },
   {
     title: "CapCut Mobile for beginners",
-    image: "images/thumbnails/capcut-mobile-beginners.jpg",
+    image: "images/thumbnails/capcut-mobile-beginners.webp",
     tags: ["Tutorial"],
     link: ""
   },
   {
     title: "Gold & Crypto Live Trading",
-    image: "images/thumbnails/gold-trading-live.png",
+    image: "images/thumbnails/gold-trading-live.webp",
     tags: ["Trading"],
     link: ""
   },
   {
     title: "Real-life time in Minecraft",
-    image: "images/thumbnails/real-life-vs-minecraft-time.jpg",
+    image: "images/thumbnails/real-life-vs-minecraft-time.webp",
     tags: ["Minecraft", "Gaming"],
     link: ""
   },
   {
     title: "Making a Game for the first time",
-    image: "images/thumbnails/day-1-vs-day-7.jpg",
+    image: "images/thumbnails/day-1-vs-day-7.webp",
     tags: ["Gaming"],
     link: ""
   },
   {
     title: "5 Best Animes to Watch",
-    image: "images/thumbnails/5-anime-to-watch.jpg",
+    image: "images/thumbnails/5-anime-to-watch.webp",
     tags: ["Anime"],
     link: ""
   },
   {
     title: "Best texture packs for Minecraft",
-    image: "images/thumbnails/best-texture-packs-mcpe.jpg",
+    image: "images/thumbnails/best-texture-packs-mcpe.webp",
     tags: ["Minecraft", "Gaming"],
     link: ""
   },
   {
     title: "Better Inventory for Minecraft",
-    image: "images/thumbnails/better-inventory-mcpe.jpg",
+    image: "images/thumbnails/better-inventory-mcpe.webp",
     tags: ["Minecraft", "Gaming"],
     link: ""
   },
   {
     title: "Best UI pack for Minecraft",
-    image: "images/thumbnails/best-ui-pack.jpg",
+    image: "images/thumbnails/best-ui-pack.webp",
     tags: ["Minecraft", "Gaming"],
     link: ""
   },
   {
     title: "Computer Science 11: Chapter 2 complete lecture",
-    image: "images/thumbnails/computer-science-11-chapter-2.jpg",
+    image: "images/thumbnails/computer-science-11-chapter-2.webp",
     tags: ["Education"],
     link: ""
   },
   {
     title: "Text highlight effect on CapCut Mobile",
-    image: "images/thumbnails/capcut-text-highlight.jpg",
+    image: "images/thumbnails/capcut-text-highlight.webp",
     tags: ["Tutorial"],
     link: ""
   }
