@@ -9,6 +9,10 @@
 
   var igProfile = "https://instagram.com/" + SITE.instagram;
   var igDm = "https://ig.me/m/" + SITE.instagram; // opens a DM with you
+  var waNumber = String(SITE.whatsapp || "").replace(/\D/g, "");
+  var email = String(SITE.email || "").trim();
+  var waBase = waNumber ? "https://wa.me/" + waNumber : "";
+  var mailBase = email ? "mailto:" + email : "";
 
   /* ---------- Site text, links, footer ---------- */
   document.title = SITE.fullTitle;
@@ -20,6 +24,20 @@
   $("igLink").textContent = "Instagram @" + SITE.instagram;
   $("igFoot").href = igProfile;
   $("igFoot").textContent = "Instagram";
+  if (waBase) {
+    $("waLink").href = waBase;
+    $("waLink").textContent = "WhatsApp +" + waNumber;
+    $("waLink").hidden = false;
+    $("waFoot").href = waBase;
+    $("waFoot").hidden = false;
+  }
+  if (email) {
+    $("emailLink").href = mailBase;
+    $("emailLink").textContent = "Email " + email;
+    $("emailLink").hidden = false;
+    $("emailFoot").href = mailBase;
+    $("emailFoot").hidden = false;
+  }
   $("copyright").textContent = "\u00A9 " + new Date().getFullYear() + " " + SITE.name;
 
   /* ---------- FAQ ---------- */
@@ -145,13 +163,15 @@
   renderFilters();
   renderGrid();
 
-  /* ---------- Contact form: writes a message to send as an Instagram DM ---------- */
+  /* ---------- Contact form: writes a message to send on WhatsApp, email or Instagram ---------- */
   var form = $("form");
   var result = $("result");
   var msg = $("msg");
   var statusEl = $("status");
 
   $("openBtn").href = igDm;
+  if (waBase) { $("waBtn").href = waBase; $("waBtn").hidden = false; }
+  if (mailBase) { $("mailBtn").href = mailBase; $("mailBtn").hidden = false; }
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -164,7 +184,13 @@
     text += " I'd like thumbnails for: " + need + ". Could you send me a quote?";
 
     msg.value = text;
-    statusEl.textContent = "Copy the message, then paste it into a DM.";
+    // WhatsApp and email open with the message already filled in.
+    if (waBase) $("waBtn").href = waBase + "?text=" + encodeURIComponent(text);
+    if (mailBase) {
+      $("mailBtn").href = mailBase + "?subject=" + encodeURIComponent("Thumbnail quote request") +
+        "&body=" + encodeURIComponent(text);
+    }
+    statusEl.textContent = "Send it on WhatsApp or by email and it's filled in for you. For Instagram, copy it and paste it into a DM.";
     result.classList.add("show");
     result.scrollIntoView({ behavior: "smooth", block: "nearest" });
   });
@@ -175,7 +201,7 @@
         msg.focus();
         msg.select();
         var ok = document.execCommand("copy");
-        statusEl.textContent = ok ? "Copied. Paste it into a DM." : "Select the message above and copy it.";
+        statusEl.textContent = ok ? "Copied. Paste it into a DM or message." : "Select the message above and copy it.";
       } catch (err) {
         statusEl.textContent = "Select the message above and copy it.";
       }
@@ -183,7 +209,7 @@
     try {
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(msg.value).then(function () {
-          statusEl.textContent = "Copied. Paste it into a DM.";
+          statusEl.textContent = "Copied. Paste it into a DM or message.";
         }, fallback);
       } else {
         fallback();
