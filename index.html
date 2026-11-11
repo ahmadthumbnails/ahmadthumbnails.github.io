@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ahmad - YouTube Thumbnail Designer</title>
-<meta name="description" content="YouTube thumbnail design for creators. Browse recent work and get a quote on Instagram.">
+<meta name="description" content="YouTube thumbnail design for creators. Browse recent work and get a quote on WhatsApp, email or Instagram.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖼️</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,6 +54,8 @@
         <h2>Get a quote</h2>
         <p class="lede" id="contactIntro"></p>
         <div class="direct">
+          <a id="waLink" href="#" target="_blank" rel="noopener" hidden></a>
+          <a id="emailLink" href="#" hidden></a>
           <a id="igLink" href="#" target="_blank" rel="noopener"></a>
         </div>
       </div>
@@ -80,6 +82,8 @@
           <textarea id="msg" readonly></textarea>
           <div class="row">
             <button class="btn btn-primary" type="button" id="copyBtn">Copy message</button>
+            <a class="btn btn-ghost" id="waBtn" href="#" target="_blank" rel="noopener" hidden>Send on WhatsApp</a>
+            <a class="btn btn-ghost" id="mailBtn" href="#" hidden>Send by email</a>
             <a class="btn btn-ghost" id="openBtn" href="#" target="_blank" rel="noopener">Open Instagram</a>
           </div>
           <p class="status" id="status" role="status" aria-live="polite"></p>
@@ -92,7 +96,11 @@
 <footer>
   <div class="wrap">
     <span id="copyright"></span>
-    <a id="igFoot" href="#" target="_blank" rel="noopener"></a>
+    <span class="foot-links">
+      <a id="waFoot" href="#" target="_blank" rel="noopener" hidden>WhatsApp</a>
+      <a id="emailFoot" href="#" hidden>Email</a>
+      <a id="igFoot" href="#" target="_blank" rel="noopener"></a>
+    </span>
   </div>
 </footer>
 
