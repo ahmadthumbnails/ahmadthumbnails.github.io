@@ -1,4 +1,4 @@
-// Site text, your Instagram, and the FAQ. Edit anything in here.
+// Site text, your contact details, and the FAQ. Edit anything in here.
 // No other file needs to change when you update these.
 
 const SITE = {
@@ -8,9 +8,16 @@ const SITE = {
   // Instagram username without the @
   instagram: "ahmad.thumbnails",
 
+  // WhatsApp number with country code, digits only (no +, spaces or dashes).
+  // Example for Pakistan: "923001234567". Leave "" to hide WhatsApp.
+  whatsapp: "923009053632",
+
+  // Your email address. Leave "" to hide email.
+  email: "ahmad.thumbnails.designer@gmail.com",
+
   headline: "YouTube thumbnails that earn the click.",
   intro: "I design thumbnails for creators who want more people to open their videos. Send me your channel and I'll reply with a quote.",
-  contactIntro: "Tell me about your channel and I'll write your message for you. You send it to me as a DM on Instagram.",
+  contactIntro: "Tell me about your channel and I'll write your message for you. You can send it to me on WhatsApp, by email, or as a DM on Instagram.",
 
   // One entry per question. Add, remove, or reorder freely.
   faq: [
@@ -36,7 +43,7 @@ const SITE = {
     },
     {
       q: "How much does it cost?",
-      a: "It depends on how many thumbnails you need and how complex they are. Send me a message with your channel and what you're after, and I'll reply with a quote."
+      a: "It depends on how many thumbnails you need and how complex they are. Message me on WhatsApp, Instagram or email with your channel and what you're after, and I'll reply with a quote."
     }
   ]
 };
